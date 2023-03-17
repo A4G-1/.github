@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/documentationAndLogos%2FSharePool%20(1).png?alt=media&token=e3f236b9-50bf-4471-859b-a96bc6a068a1" align="center" width="500">
+</p>
+
 # Statement of Goals
 
 In the present, users looking to carpool are unable to find an outlet to allow them to plan with friends. Rather, they must pay a third party source to allow them to carpool otherwise. Furthermore, when planning a trip with friends, determining the optimal location of meeting may be problematic. Some locations may be ideal for parties; however, they may have traffic ridden roads making them inaccessible. This issue is especially prevalent for individuals attempting to carpool to school together. When multiple individuals carpool together, communication across the party tends to be lacking. 

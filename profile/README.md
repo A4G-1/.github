@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/logos%2FSharePool%20(7).png?alt=media&token=435948d1-0e03-4bf0-8b6b-445b40768e4a" align="center" width="200">
+<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/logos%2FSharePool%20(7).png?alt=media&token=77c0cf20-edc8-4b47-820e-f77fe941af87" align="center" width="500">
 </p>
 
 # Statement of Goals
@@ -14,7 +14,8 @@ Our goal is to create an application that solves these issues by <br>
 Note: Optimal location is defined by the location that requires the least amount of time total for the group to reach the end location.
 
 # Functional Description (MVP)
-Our application will store carpoolers in clusters with assigned drivers. These clusters then all are granted access to view the same map view and information. Chats within the group are then created to allow for communication. Authentication will occur through Firebase while storage will primarily occur through MongoDB.
+Our application will store carpoolers in clusters with assigned drivers. These clusters then all are granted access to view the same map view and information. Chats within the group are then created to allow for communication. Authentication will occur through 
+while storage will primarily occur through MongoDB.
 The 3 core features of the product are: 
 <br> 1) Real-time location tracking for all members of the carpool cluster
 <br> 2) Communication within the cluster to enable connectivity
@@ -45,7 +46,7 @@ If a user decides to leave the carpool during an already planned trip, the algor
 
 Rough API Design & Existing Technologies Integrations
 
-<img src="https://firebasestorage.googleapis.com/v0/b/sharepool-e5a30.appspot.com/o/documentation%2FSharePool.png?alt=media&token=229b4fe0-eb63-4cb1-b5bd-8ed087c216dc">
+<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/documentation%2FSharePool-1.png?alt=media&token=681b038f-561b-498b-a890-44bb38bdb3ef">
 
 # User Interface
 
@@ -56,7 +57,7 @@ This user interface enables the user to view account related details. Furthermor
 The map view as well as the cluster tab simplifies the concept for the user in a friendly format for them to view. Additionally, the “plan trip” button will enable the user to start a new shared trip with the simple click of a button. Though the concepts involved in allowing for the app to function may be complex, the user is able to view a highly simplified and easy to use application.
 Flow Chart / Systems Diagram
 
-<img src="https://firebasestorage.googleapis.com/v0/b/sharepool-e5a30.appspot.com/o/documentation%2Fsystemsdiagram.png?alt=media&token=06d4620e-26f7-487a-8a4f-4b2ac2d37a59">
+<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/documentation%2Fsystemsdiagram.png?alt=media&token=2b7226f5-f5d5-4eb3-ba46-92c7ee86eb3c">
 
 # Persistent Storage
 Our application stores associated data in a cloud database format because users need to be able to form clusters of carpoolers. We are highly considering Firebase based on the reliance of building with Flutter. Both Flutter and Firebase are made through Google, increasing the in-house support of related technologies. In order to fulfill the cluster storage requirement, we will utilize Firestore, which runs on document-based record storage.

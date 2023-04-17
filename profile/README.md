@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/documentationAndLogos%2FSharePool%20(1).png?alt=media&token=e3f236b9-50bf-4471-859b-a96bc6a068a1" align="center" width="500">
+<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/logos%2FSharePool%20(7).png?alt=media&token=435948d1-0e03-4bf0-8b6b-445b40768e4a" align="center" width="200">
 </p>
 
 # Statement of Goals

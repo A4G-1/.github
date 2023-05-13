@@ -2,51 +2,42 @@
 <img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/logos%2FSharePool%20(7).png?alt=media&token=77c0cf20-edc8-4b47-820e-f77fe941af87" align="center" width="500">
 </p>
 
-# Statement of Goals
+# Executive Summary
 
-In the present, users looking to carpool are unable to find an outlet to allow them to plan with friends. Rather, they must pay a third party source to allow them to carpool otherwise. Furthermore, when planning a trip with friends, determining the optimal location of meeting may be problematic. Some locations may be ideal for parties; however, they may have traffic ridden roads making them inaccessible. This issue is especially prevalent for individuals attempting to carpool to school together. When multiple individuals carpool together, communication across the party tends to be lacking. 
+Currently, students are unable to commute to school due to issues with services that provide transportation. Buses tend to be late or systems are entirely defunct. As a result, there needs to be a method for users to arrive to and from school without relying on a bus system. However, services such as Uber and Lyft come at high costs. As a result, SharePool presents a novel solution by enabling users to plan routes together without the interference of another third party business. Users can plan based on their schedule and start and end routes with other students or friends. Our app will specifically allow students to arrive at school in amore timely fashion and allow parents to plan pickup in carpool groups.
 
-Our goal is to create an application that solves these issues by <br>
-(a) Aid those without cars to carpool with others in various settings (i.e. school or church groups)<br>
-(b) Determine the optimal meeting location of the individual carpoolers given their initial locations and the one that they wish to visit.<br>
-(c) Enable communication across a party to allow for greater connectivity
+# Introduction
 
-Note: Optimal location is defined by the location that requires the least amount of time total for the group to reach the end location.
+— I. Problem —
 
-# Functional Description (MVP)
-Our application will store carpoolers in clusters with assigned drivers. These clusters then all are granted access to view the same map view and information. Chats within the group are then created to allow for communication. Authentication will occur through 
-while storage will primarily occur through MongoDB.
-The 3 core features of the product are: 
-<br> 1) Real-time location tracking for all members of the carpool cluster
-<br> 2) Communication within the cluster to enable connectivity
-<br> 3) An algorithm to find the best route to utilize within the carpool cluster based on differing starting locations <br>
-> 3a) Where route is the shortest route overall <br>
-> 3b) Where the route is the shortest for person a, b, c… <br> 
-> 3c) Where route requires equal driving from all people <br>
-4) Technical and Data Feasibility
+In the present, it is highly difficult for users to plan carpools together. In order to rideshare, most people tend to utilize services such as Uber or Lyft in order to travel from one location to another. This trend turns into an issue in the scope of commuting to school. When commuting to and from school, using a service such as Uber is not feasible in the short timespan that students have prior to arriving at school. This dependency forces students to rely on bus systems, a network which also contains several flaws.
 
-In order to accomplish the tracking features of the application, a few pieces of information will be required from clients:
+The main issue arises with the pricing of buses as they tend to cost far more than some students can afford. In California, the $40 bus fee has prevented some students from being able to attend classes, leading to the possibility of being unable to graduate from college (West, 2021). When the commute to school becomes an obstacle towards graduation, it becomes clear that an alternative must be identified to enable more individuals to graduate.
 
-- A mobile phone number
-- Location tracking services via Google Maps API
-- Client names
-- Client age
-- Client email
+Furthermore, this issue extends to highschoolers as Chalkbeat reports that “Two-thirds of Detroit students missed at least one of every 10 school days in 2021.” Detroit faces this issue due to a system of inadequate transport planning with buses. As a result, the responsibility to arrive to and from school falls on the shoulders of parents and family friends (Chalkbeat, 2023). Missing school due to the inability to transport prevents students from receiving valuable instruction. 
 
-In order to create the desired cluster format, a noSQL framework will be used to optimize searching. A NoSQL database will require too long for searching records. Furthermore, the data must be stored in the cluster format. A preview of the cluster will be
+Aside from high prices and bus systems that are defunct, experts find that transport systems that are in place still tend to cause issues. In New York City, 350 buses are late every single day in varying districts (New York City Council, 2022). Thus, in this scenario, students are able to arrive at school, but they miss valuable time from instructors. In order to ensure students can graduate and have successful futures, these issues must be alleviated.
 
-	clusterName: cluster0
-	users: [name, number], [name, number]. [name, number]
-	mapsAPIToken: ZXYRXYJtyrfyjweOIL
-	clusterSettingA: true
-	clusterSettingB: false
-	etc.
+— II. Audience —
 
-If a user decides to leave the carpool during an already planned trip, the algorithm will instantaneously update to account for the change. The algorithm will also be able to adjust for a change in final destination.
+The primary users of this application will be students and parents. Since transportation is an issue for both middle/high school students as well as undergraduate students, the application will be used for both demographics. In the United States, it is illegal for students to drive until they turn 16, so the student and the parent will both download the application and use the functionality in order to plan and manage ride sharing. However, at the undergraduate level, because students are at an age where they can legally drive, students will typically be the ones in charge of ride sharing and planning.
 
-Rough API Design & Existing Technologies Integrations
+In order to solve the problems mentioned in section I, the main goal for our application is to (a) provide users with a low-cost method to arrive at school, (b) arrive at school on-time without missing instruction, (c) streamline school carpooling with estimate time of arrival and other built in features. As previously mentioned, students in Detroit and New York City often miss instruction due to faulty bus systems. Goals a and b solve for these issues. Furthermore, students unable to use the bus system due to costs will now be able to use our application to arrive to and from school at no cost. Our third goal provides an extra measure of safety and reassurance to both students and parents alike.
 
-<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/documentation%2FSharePool-1.png?alt=media&token=681b038f-561b-498b-a890-44bb38bdb3ef">
+— III. Competition — 
+
+In terms of ridesharing, the first competitors in the field are Uber and Lyft. The main issue with these solutions is the cost. Students should be able to arrive at school at no cost. As a result, both of these services are inadequate as they will charge students a fee to arrive at their destination. Furthermore, in the scope of highschool carpooling, parents need to be involved to see their students' location for pickup. These two services once again do not account for this need. Finally, in the evenings, when students need to be picked up by another parent or need an estimated time of arrival for pickup, they will be unable to find such information via Uber or Lyft.
+
+However, the main goal of our application is the same as Uber and Lyft: transporting a user from location A to B. In order to improve on this base idea, SharePool presents a few advantages.
+
+- Being specifically aimed at the student population to enable easy carpooling
+- Providing a parent view to understand where their child is
+- Streamlining pickups in the evening for multiple parents by providing the locations of multiple students
+- Utilizing a built-in calendar service that coordinates when students will be joining a carpool (i.e. student A cannot carpool on Monday because have programming team)
+
+Architecture
+
+<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/documentation%2FUntitled%20design%20(14).png?alt=media&token=d4dfcc1c-5424-41f0-813d-40902be3beb1" width="500">
 
 # User Interface
 
@@ -63,3 +54,19 @@ Flow Chart / Systems Diagram
 Our application stores associated data in a cloud database format because users need to be able to form clusters of carpoolers. We are highly considering Firebase based on the reliance of building with Flutter. Both Flutter and Firebase are made through Google, increasing the in-house support of related technologies. In order to fulfill the cluster storage requirement, we will utilize Firestore, which runs on document-based record storage.
 
 <br> <i>Data: users collection, groups collection</i>
+
+# Poster Presentation
+
+<img src="https://firebasestorage.googleapis.com/v0/b/share-ff6c6.appspot.com/o/documentation%2Fposter%20draft%20afg.jpg?alt=media&token=458fca88-e9e4-416d-ada6-91ac1073eb9a" width="450">
+
+
+# References
+
+References
+
+‘It’s cold and the bus passed me.’ How transportation problems fuel absenteeism in Detroit. (2023, March 22). Chalkbeat Detroit. https://detroit.chalkbeat.org/2023/3/22/23650149/detroit-students-transportation-bus-chronic-absenteeism-attendance
+
+New York City Council holds hearing on issues with school bus transportation. (2022, November 21). ABC7 New York. https://abc7ny.com/nyc-bus-transportation-issues/12478329/
+
+West, C. (2021, December 10). A surprising reason keeping students from finishing college: A lack of transportation. The Hechinger Report. https://hechingerreport.org/a-surprising-reason-keeping-students-from-finishing-college-a-lack-of-transportation/
+
